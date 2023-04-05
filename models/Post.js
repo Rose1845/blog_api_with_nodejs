@@ -1,4 +1,4 @@
-const mongoose=require('mongoose')
+const mongoose = require("../db");
 
 const PostSchema=new mongoose.Schema({
     title:{

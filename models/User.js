@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("../db");
 
 const UserSchema = new mongoose.Schema(
   {
@@ -9,7 +9,7 @@ const UserSchema = new mongoose.Schema(
     },
     email: {
       type: String,
-      required:true,
+      required: true,
       unique: true,
     },
     password: {
