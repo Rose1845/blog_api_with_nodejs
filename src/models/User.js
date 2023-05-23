@@ -1,4 +1,4 @@
-const mongoose = require("../src/db");
+const mongoose = require("../db/index");
 
 const UserSchema = new mongoose.Schema(
   {
