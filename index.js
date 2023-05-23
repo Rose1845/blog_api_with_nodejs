@@ -2,10 +2,11 @@ const express = require("express");
 // cors is used to allow cross origin resource sharing
 const cors = require("cors");
 const morgan = require("morgan");
-const authRoute = require("./routes/auth");
-const usersRoutes = require("./routes/users");
-const postRoutes = require("./routes/posts");
-const categoryRoutes = require("./routes/categories");
+const path = require("path");
+const authRoute = require("./src/routes/auth");
+const usersRoutes = require("./src/routes/users");
+const postRoutes = require("./src/routes/posts");
+const categoryRoutes = require("./src/routes/categories");
 
 
 const PORT = 8000;
@@ -55,7 +56,7 @@ app.use(
 // app.post("/api/upload", upload.single("file"), (req, res) => {
 //   res.status(200).json("File has been uploaded");
 // });
-app.use(express.static("images"));
+app.use(express.static(path.resolve(__dirname)+'/images'));
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoutes);
 app.use("/api/posts", postRoutes);

@@ -1,4 +1,4 @@
-const mongoose = require("../db");
+const mongoose = require("../src/db");
 
 const UserSchema = new mongoose.Schema(
   {
@@ -16,7 +16,7 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    profilePic: {
+    photo: {
       type: String,
       default: "",
     },

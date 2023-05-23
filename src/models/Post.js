@@ -1,4 +1,4 @@
-const mongoose = require("../db");
+const mongoose = require("../src/db");
 
 const PostSchema=new mongoose.Schema({
     title:{
