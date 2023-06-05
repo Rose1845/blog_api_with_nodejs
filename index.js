@@ -9,7 +9,7 @@ const postRoutes = require("./src/routes/posts");
 const categoryRoutes = require("./src/routes/categories");
 
 
-const PORT = 8000;
+const PORT = 8080;
 const app = express();
 app.use(express.json());
 app.use(morgan("dev"));
